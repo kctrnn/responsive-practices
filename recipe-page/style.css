@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#container {
+  max-width: 100rem;
+  padding: 2.4rem 1.5rem;
+  margin: 0 auto;
+}
+
+/* SECTION HERO */
+.hero {
+  padding-top: 2.8rem;
+}
+
+.hero-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.hero-desc {
+  margin-top: 1.2rem;
+
+  color: #4f4f4f;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero-image {
+  border-radius: 12px;
+  margin-top: 4.3rem;
+}
+
+/* SECTION INGREDIENTS*/
+.ingredients {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-top: 4.8rem;
+}
+
+.ingredients-left {
+  max-width: 60%;
+}
+
+.ingredients-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.ingredients-item {
+  margin-top: 3.2rem;
+}
+
+.ingredients-name {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+
+  margin-bottom: 2.8rem;
+}
+
+.ingredients-desc {
+  margin-bottom: 1.2rem;
+}
+
+.ingredients-desc > i {
+  vertical-align: middle;
+  color: #828282;
+  font-size: 2.1rem;
+
+  margin-right: 1.6rem;
+}
+
+.ingredients-right {
+  padding: 5rem 4.3rem;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  flex-basis: 22%;
+}
+
+.ingredients-right-item {
+  display: flex;
+  align-items: center;
+}
+
+.ingredients-right-item:first-child > i,
+.ingredients-right-item:first-child .ingredients-right-number {
+  color: #f2994a;
+}
+
+.ingredients-right-item:not(:first-child) {
+  margin-top: 4.3rem;
+}
+
+.ingredients-right-icon {
+  margin-right: 1.4rem;
+  font-size: 2.8rem;
+  color: #4f4f4f;
+}
+
+.ingredients-right-name {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.ingredients-right-number {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* SECTION INSTRUCTIONS*/
+.instructions {
+  margin-top: 2.8rem;
+  max-width: 60%;
+}
+
+.instructions-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.instructions-item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.8rem;
+}
+
+.instructions-number {
+  padding: 2px 16px 8px;
+  background-color: #f2994a;
+  border-radius: 6px;
+  margin-right: 1.6rem;
+
+  font-size: 2.4rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.instructions-desc {
+  color: #000;
+}
+
+@media screen and (max-width: 575px) {
+  .ingredients {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    margin-top: 2.4rem;
+  }
+
+  .ingredients-left {
+    max-width: 100%;
+  }
+
+  .ingredients-right {
+    box-shadow: unset;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+
+  .ingredients-right-item:not(:first-child) {
+    width: 25%;
+    display: inline-flex;
+  }
+
+  .ingredients-right-item:not(:last-child) {
+    margin-right: 5rem;
+  }
+
+  .instructions {
+    max-width: 100%;
+  }
+}
+
+.source {
+  color: #bdbdbd;
+  font-style: italic;
+  margin-top: 5.7rem;
+}
+
+.author {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #828282;
+
+  margin-top: 9.3rem;
+}
