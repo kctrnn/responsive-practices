@@ -1,0 +1,115 @@
+html {
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border: 0;
+
+  font-family: inherit;
+  color: #fff;
+
+  background-color: #000;
+  font-size: 1rem;
+
+  transition: all 200ms ease-in-out;
+
+  &--capital {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+// Media queries
+
+@mixin responsive($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin flex-box(
+  $justify: flex-start,
+  $align: stretch,
+  $direction: row,
+  $wrap: wrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+
+  flex-flow: $direction $wrap;
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: center;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.section-subheading {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+
+  margin-bottom: 1rem;
+}

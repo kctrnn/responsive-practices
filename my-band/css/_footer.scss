@@ -1,0 +1,31 @@
+.footer {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &-social {
+    margin-bottom: 1rem;
+
+    & > * {
+      font-size: 1.5rem;
+      color: #777;
+      margin: 2px;
+
+      transition: color 200ms ease-in-out;
+
+      &:hover {
+        color: #999;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-creator {
+    color: #777;
+
+    & > a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}

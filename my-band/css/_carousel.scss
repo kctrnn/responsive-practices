@@ -1,0 +1,60 @@
+.carousel {
+  height: 100vh;
+  overflow: hidden;
+
+  @include responsive(991px) {
+    height: 80vh;
+  }
+
+  @include responsive(767px) {
+    height: 60vh;
+  }
+
+  @include responsive(575px) {
+    height: 40vh;
+  }
+
+  &-inner {
+    height: 100%;
+
+    position: relative;
+    transition: transform 1000ms ease-in-out;
+  }
+
+  &-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-caption {
+    text-align: center;
+    color: #fff;
+
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include responsive(575px) {
+      display: none;
+    }
+
+    & > h5 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    & > p {
+      font-weight: 500;
+    }
+  }
+}

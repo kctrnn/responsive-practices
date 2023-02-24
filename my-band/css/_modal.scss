@@ -1,0 +1,116 @@
+// MODAL
+.modal {
+  position: fixed;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  @include flex-box(center, flex-start);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in-out;
+
+  &.active {
+    align-items: center;
+
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &.active > &-container {
+    transform: translateY(0);
+  }
+
+  &-container {
+    transform: translateY(-100%);
+    transition: transform 500ms ease-in-out;
+
+    width: 50vw;
+    background-color: #fff;
+    position: relative;
+
+    @include responsive(991px) {
+      width: 60vw;
+    }
+
+    @include responsive(767px) {
+      width: 70vw;
+    }
+
+    @include responsive(575px) {
+      width: 80vw;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    padding: 0.5rem 1rem;
+    color: #fff;
+
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ccc;
+      color: #000;
+    }
+  }
+
+  &-header {
+    background-color: #009688;
+    color: #fff;
+    height: 10rem;
+
+    @include flex-box(center, center);
+  }
+
+  &-heading {
+    font-weight: 400;
+
+    & > i {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &-body {
+    padding: 1rem;
+  }
+
+  &-help {
+    margin-top: 2rem;
+    text-align: right;
+  }
+}
+
+.modal-form > .form {
+  &-group {
+    margin-bottom: 1rem;
+
+    & > input {
+      width: 100%;
+      padding: 0.4rem 1rem;
+      border: 1px solid #ccc;
+
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    & > label {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+  }
+
+  &-pay {
+    width: 100%;
+    background-color: #009688;
+
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+}

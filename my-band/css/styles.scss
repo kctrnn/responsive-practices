@@ -1,0 +1,29 @@
+@import "./base";
+
+@import "./header";
+@import "./carousel";
+@import "./about";
+@import "./contact";
+@import "./tour";
+@import "./footer";
+@import "./modal";
+
+// MAP SECTION
+.map {
+  & > img {
+    filter: grayscale(40%);
+  }
+}
+
+// BACK TO TOP
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+
+  padding: 0.8rem 1rem;
+
+  @include responsive(575px) {
+    display: none;
+  }
+}

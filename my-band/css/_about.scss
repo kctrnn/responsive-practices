@@ -1,0 +1,51 @@
+// ABOUT SECTION
+.about {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+
+  &-heading {
+    @extend .section-heading;
+  }
+
+  &-subheading {
+    @extend .section-subheading;
+  }
+
+  &-description {
+    text-align: justify;
+  }
+
+  &-team {
+    padding: 0 2rem;
+    margin-top: 4rem;
+
+    @include flex-box(space-between, center);
+
+    & > * {
+      width: 25%;
+    }
+
+    @include responsive(767px) {
+      padding: 2rem 1rem;
+    }
+
+    @include responsive(575px) {
+      flex-direction: column;
+
+      & > * {
+        width: 50%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.team {
+  &-name {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+
+    margin-bottom: 1rem;
+  }
+}
