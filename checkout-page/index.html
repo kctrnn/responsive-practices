@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/devchallenges.png" />
+
+    <!-- Use font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Checkout page</title>
+  </head>
+  <body>
+    <div class="checkout">
+      <h1 class="checkout-title">Checkout</h1>
+
+      <div class="checkout-main">
+        <form class="checkout-form">
+          <div class="form-contact-info">
+            <h2>Contact information</h2>
+
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail</label>
+              <div class="form-input">
+                <i class="fas fa-envelope"></i>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email.."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone</label>
+              <div class="form-input">
+                <i class="fas fa-phone-alt"></i>
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Enter your phone.."
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-shipping-address">
+            <h2>Shipping address</h2>
+
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full name</label>
+              <div class="form-input">
+                <i class="fas fa-user-circle"></i>
+                <input
+                  id="fullName"
+                  type="tel"
+                  placeholder="Your name.."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address" class="form-label">Address</label>
+              <div class="form-input">
+                <i class="fas fa-home"></i>
+                <input
+                  id="address"
+                  type="text"
+                  placeholder="Your address.."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="city" class="form-label">City</label>
+              <div class="form-input">
+                <i class="fas fa-city"></i>
+                <input
+                  id="city"
+                  type="text"
+                  placeholder="Your city.."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group dropdown">
+              <label class="form-label">Country</label>
+
+              <div class="form-input dropdown-select">
+                <i class="fas fa-globe-asia"></i>
+                <input type="text" placeholder="Your country.." required />
+                <i class="fas fa-chevron-down"></i>
+              </div>
+
+              <ul class="dropdown-list">
+                <li class="dropdown-item" data-country="Viet Nam">Viet Nam</li>
+                <li class="dropdown-item" data-country="Belgium">Belgium</li>
+                <li class="dropdown-item" data-country="England">England</li>
+              </ul>
+            </div>
+
+            <div class="form-group">
+              <label for="postalCode" class="form-label">Postal code</label>
+              <div class="form-input">
+                <i class="fab fa-codepen"></i>
+                <input
+                  id="postalCode"
+                  type="text"
+                  placeholder="Your postal code.."
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-input checkbox">
+                <input type="checkbox" />
+              </div>
+
+              <label class="form-label"
+                >Save this information for next time</label
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit">Continue</button>
+        </form>
+
+        <div class="checkout-cart">
+          <div class="cart-item">
+            <img src="img/photo1.png" alt="" class="cart-item-image" />
+            <div class="cart-item-content">
+              <h3 class="cart-item-name">Vintage Backbag</h3>
+              <p class="cart-item-price">$54.99 <del>$94.99</del></p>
+              <div class="cart-item-count">
+                <i class="fas fa-minus"></i>
+                <span>1</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="img/photo2.png" alt="" class="cart-item-image" />
+            <div class="cart-item-content">
+              <h3 class="cart-item-name">Levi Shoes</h3>
+              <p class="cart-item-price">$74.99 <del>$124.99</del></p>
+              <div class="cart-item-count">
+                <i class="fas fa-minus"></i>
+                <span>1</span>
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+          </div>
+
+          <p class="cart-shipping">
+            <span>Shipping</span>
+            <span>$19</span>
+          </p>
+
+          <p class="cart-total">
+            <span>Total</span>
+            <span>$148.98</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
