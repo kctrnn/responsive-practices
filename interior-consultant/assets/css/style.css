@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap');
+
+html {
+  font-size: 18px;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: normal;
+
+  background-color: #000;
+  color: white;
+}
+
+#container {
+  /* background-color: lightcoral; */
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4.5rem 7.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+img {
+  max-width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  font-size: 14px;
+  font-family: 'Crimson Pro', serif;
+  color: white;
+
+  padding: 0.8rem;
+  border: 1px solid white;
+  text-transform: uppercase;
+}
+
+.burger {
+  cursor: pointer;
+  display: none;
+}
+
+.burger > div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 10px;
+
+  transition: all 300ms ease-in-out;
+}
+
+.burger.active > .line1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.burger.active > .line2 {
+  opacity: 0;
+}
+.burger.active > .line3 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu__item {
+  margin-left: 8.6rem;
+}
+
+.menu__item:first-child {
+  margin-left: 0;
+}
+
+.menu__link {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.menu__link.active {
+  font-weight: 700;
+}
+
+/* SECTION ABOUT */
+.about {
+  margin-top: 17rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about__content {
+  max-width: 32%;
+  margin-right: 15rem;
+}
+
+.about__title {
+  font-family: 'Lora', serif;
+  font-size: 4.8rem;
+}
+
+.about__description {
+  margin-top: 4rem;
+  margin-bottom: 4.8rem;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+.about__read-more {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.about__read-more > i {
+  vertical-align: middle;
+  margin-left: 1.5rem;
+}
+
+.about__image {
+  position: relative;
+}
+
+.designer {
+  width: 56%;
+  padding: 1.5rem 2.5rem;
+  background-color: #000;
+
+  position: absolute;
+  right: 2rem;
+  bottom: -10rem;
+}
+
+.designer__info {
+  display: flex;
+  align-items: center;
+}
+
+.designer__info > img {
+  max-width: 50px;
+  border-radius: 50%;
+  margin-right: 1.5rem;
+}
+
+.designer__detail > p {
+  font-size: 1.2rem;
+  color: #828282;
+  margin-top: 0.8rem;
+}
+
+.designer__text {
+  max-width: 80%;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+
+  font-size: 2.4rem;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+}
+
+/* FOOTER */
+.footer {
+  font-size: 14px;
+  margin-top: 20rem;
+
+  text-align: center;
+  font-weight: 600;
+  color: #a9a9a9;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  #container {
+    padding: 3rem 5rem;
+  }
+
+  .about__content {
+    max-width: 35%;
+    margin-right: 6rem;
+  }
+
+  .designer {
+    width: 80%;
+  }
+
+  .designer__text {
+    max-width: 70%;
+  }
+
+  .menu__item {
+    margin-left: 6.5rem;
+  }
+
+  .footer {
+    margin-top: 18rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+
+  #container {
+    padding: 2.5rem 2rem;
+  }
+
+  .about {
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  .about__content {
+    max-width: 50%;
+    margin-bottom: 3.5rem;
+  }
+
+  .footer {
+    margin-top: 14rem;
+  }
+
+  .burger {
+    display: block;
+    z-index: 22;
+  }
+
+  .burger.active {
+    position: fixed;
+    right: 2rem;
+  }
+
+  .menu {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    height: 100vh;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    transform: translateX(-100%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu__item {
+    margin-left: 0;
+  }
+}
