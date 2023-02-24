@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  max-width: 400px;
+}
+
+#container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 10rem 2rem 3rem;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.header__title {
+  font-family: 'PT Serif', serif;
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+.header__description > h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+/* SECTION GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 10rem);
+  grid-gap: 7rem;
+
+  padding-right: 2rem;
+}
+
+.person {
+  position: relative;
+}
+
+.person__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.person:first-child,
+.person:nth-child(3) {
+  grid-row: 1 / span 3;
+}
+
+.person:nth-child(2) {
+  grid-row: 2 / span 3;
+}
+
+.person:nth-child(5) {
+  grid-row: 6 / span 3;
+}
+
+.person:nth-child(4),
+.person:nth-child(6) {
+  grid-row: 5 / span 3;
+}
+
+.person__job {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  transform: rotate(90deg);
+
+  min-width: 12rem;
+
+  position: absolute;
+  top: 5rem;
+  right: -7.5rem;
+}
+
+.person__name {
+  font-weight: 600;
+  padding-top: 1rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 10rem;
+  color: #a9a9a9;
+  font-size: 1.4rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .gallery {
+    gap: 3rem 6rem;
+  }
+
+  .header__title {
+    max-width: 25rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #container {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .header__title {
+    margin-bottom: 4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 6rem;
+  }
+
+  .person:nth-child(3) {
+    grid-row: 5 / span 3;
+  }
+
+  .person:nth-child(4) {
+    grid-row: 6 / span 3;
+  }
+
+  .person:nth-child(5) {
+    grid-row: 9 / span 3;
+  }
+
+  .person:nth-child(6) {
+    grid-row: 10 / span 3;
+  }
+}
