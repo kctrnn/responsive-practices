@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #2f80ed;
+  --text-color: #828282;
+  --border-color: #e0e0e0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  line-height: 2;
+  color: var(--text-color);
+
+  height: 100vh;
+
+  /* background-image: url(img/flowerPlant.jpeg); */
+  background-size: cover;
+  background-position: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+p {
+  max-width: 600px;
+}
+
+.background-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+#container {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 24px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.logo {
+  grid-column: 1/5;
+  margin: 0 auto;
+}
+
+.panel {
+  grid-column: 6/12;
+  padding: 40px;
+
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.panel__heading {
+  font-weight: 700;
+  font-size: 24px;
+  color: #222;
+}
+
+.panel__subheading {
+  margin-bottom: 28px;
+}
+
+.form__group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form__group > label {
+  display: block;
+}
+
+.form__group > input,
+.form__group > select {
+  height: 28px;
+  width: 100%;
+  padding: 0;
+
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--border-color);
+
+  font-family: inherit;
+}
+
+.form__indicator {
+  content: '';
+  height: 2px;
+  width: 0;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  transition: all 300ms ease-in-out;
+}
+
+.form__group > input:focus ~ .form__indicator {
+  width: 100%;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+.form__name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__name > .form__group {
+  width: 45%;
+}
+
+.date-of-birth__heading {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.date-of-birth__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-of-birth__inner > .form__group {
+  width: 30%;
+}
+
+.form__terms {
+  margin-bottom: 40px;
+}
+
+.form__submit {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 9px;
+  outline: none;
+
+  background-color: var(--primary-color);
+
+  font-family: inherit;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+
+  .panel {
+    grid-column: 2 / span 10;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #container {
+    padding: 0;
+  }
+
+  .panel {
+    grid-column: 1 / span 12;
+    height: 100%;
+    border-radius: 0;
+  }
+}

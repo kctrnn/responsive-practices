@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="img/behold-logo-small.png" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Behold</title>
+  </head>
+  <body>
+    <div class="background-overlay">
+      <div id="container">
+        <img src="img/behold-logo.png" alt="" class="logo" />
+
+        <div class="panel">
+          <h1 class="panel__heading">Create an account</h1>
+
+          <p class="panel__subheading">
+            Already have an account? <a href="#">Sign in</a>
+          </p>
+
+          <form class="form" onsubmit="alert('Success')" autocomplete="off">
+            <div class="form__group">
+              <label for="email-address">Email address</label>
+              <input type="email" required id="email-address" />
+
+              <div class="form__indicator"></div>
+            </div>
+
+            <div class="form__name">
+              <div class="form__group">
+                <label for="first-name">First name</label>
+                <input type="text" required id="first-name" />
+
+                <div class="form__indicator"></div>
+              </div>
+
+              <div class="form__group">
+                <label for="last-name">Last name</label>
+                <input type="text" required id="last-name" />
+
+                <div class="form__indicator"></div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label for="password">Password</label>
+              <input type="password" required id="password" />
+
+              <div class="form__indicator"></div>
+            </div>
+
+            <div class="date-of-birth">
+              <h6 class="date-of-birth__heading">Date of birth</h6>
+
+              <div class="date-of-birth__inner">
+                <div class="form__group">
+                  <label for="month">Month</label>
+                  <select name="month" id="month">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <label for="day">Day</label>
+                  <input type="text" required id="day" />
+
+                  <div class="form__indicator"></div>
+                </div>
+
+                <div class="form__group">
+                  <label for="year">Year</label>
+                  <input type="text" required id="year" />
+
+                  <div class="form__indicator"></div>
+                </div>
+              </div>
+
+              <p class="form__terms">
+                By clicking Create account, I agree that I have read and
+                accepted the <a href="#">Terms of Use</a> and
+                <a href="#">Privacy Policy</a> .
+              </p>
+
+              <button type="submit" class="form__submit">Create account</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
